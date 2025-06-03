@@ -1,0 +1,54 @@
+npm install @discord/embedded-app-sdk
+import { DiscordSDK } from "@discord/embedded-app-sdk";
+
+const discordSdk = new DiscordSDK(DISCORD_CLIENT_ID);
+import os
+import discord
+from dotenv import load_dotenv
+from dee_core import WyomingDee
+
+# Load environment variables
+load_dotenv()
+DISCORD_TOKEN = os.getenv("DISCORD_TOKEN")
+
+# Initialize Dee
+dee = WyomingDee()
+intents = discord.Intents.default()
+intents.message_content = True
+client = discord.Client(intents=intents)
+
+@client.event
+async def on_ready():
+    print(f'🔥 DEE ONLINE | Logged in as {client.user}')
+    await client.change_presence(
+        activity=discord.Activity(
+            type=discord.ActivityType.watching,
+            name="for @mentions | Type '@Dee help'"
+        )
+    )
+
+@client.event
+async def on_message(message):
+    # Ignore messages from self
+    if message.author == client.user:
+        return
+    
+    # Respond to mentions
+    if client.user.mentioned_in(message):
+        try:
+            # Extract clean command
+            command = message.content.replace(f'<@{client.user.id}>', '').strip()
+            
+            # Process command
+            response = dee.handle_command(command)
+            
+            # Send response with Wyoming flair
+            await message.reply(f"**⚡ WYOMING DEE:** {response}")
+            
+        except Exception as e:
+            print(f"ERROR: {str(e)}")
+            await message.reply("**🤠 WHOA THERE, PARTNER!** System glitch. Try again?")
+
+# Run the bot
+if __name__ == "__main__":
+    client.run(DISCORD_TOKEN)
