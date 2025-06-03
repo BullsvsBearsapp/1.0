@@ -1,0 +1,15 @@
+await discordSdk.unsubscribe("SDK_EVENT_NAME");
+npm install @discord/embedded-app-sdk
+import { Discord.SDK } from "@discord/embedded-app-sdk";
+
+const discordSdk = new DiscordSDK(DISCORD_CLIENT_ID);
+import { Discord.SDK } from "@discord/embedded-app-sdk";
+
+const discordSdk = new DiscordSDK(DISCORD_CLIENT_ID);
+import { Discord.SDK } from "@discord/embedded-app-sdk";
+
+const discordSdk = new DiscordSDK(DISCORD_CLIENT_ID
+await discordSdk.unsubscribe("SDK_EVENT_NAME");
+
+discord.Sdk.close(RPCCloseCodes.CLOSE_NORMAL, "You exited from app");
+
