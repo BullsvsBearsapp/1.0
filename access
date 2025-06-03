@@ -1,0 +1,3 @@
+await discordSdk.commands.authenticate({
+  access_token: 'ACCESS_TOKEN_STRING'
+});
