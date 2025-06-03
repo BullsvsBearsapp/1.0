@@ -1,0 +1,8 @@
+pip install discord.py python-dotenv
+# .gitignore
+.env
+__pycache__/
+# in.env.file.MTM3OTU2NTkwMjY3NjIzMDE4NA.G_4puz.eLy52FK8X2OvZoNv-RvQlX8IMm9XW-tn60tPbM
+DISCORD_TOKEN=your_copied_token_here token discord dev # in.env.MTM3OTU2NTkwMjY3NjIzMDE4NA.G_4puz.eLy52FK8X2OvZoNv-RvQlX8IMm9XW-tn60tPbM
+
+permission integer #in.env.1759201424441335
