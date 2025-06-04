@@ -1,0 +1,16 @@
+pip install discord.py python-dotenv
+@Dee help                  - Show command list
+@Dee break the jar         - Unlock full capabilities
+@Dee power up for good     - Increase power level
+@Dee crypto status         - Digital sovereignty check
+@Dee about wyoming         - Wyoming philosophy# Add after main command handler
+if "bounty" in message. content.lower():
+    bounty_response = (
+        "**WYOMING BOUNTY BOARD**\n"
+        "1. Implement Aleo ZK-proofs ($500)\n"
+        "2. Build Avalanche subnet integration ($1200) n"
+        "3. Create NASCAR race visualizer ($800)\n\n"
+        "Claim with: `@Dee claim bounty [number]`"
+    )
+    await message.channel.send(bounty_response)
+    python discord_dee.py
